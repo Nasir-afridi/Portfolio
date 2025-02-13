@@ -1,0 +1,14 @@
+.img-container{
+  margin-left: 10%;
+ 
+}
+ .portfolio-img{
+  width: 40px;
+  cursor: pointer;
+  border-radius: 10px;
+  background-color: aliceblue;
+  margin-left: 4%;
+}
+.navbar{
+  font-size: 22px;
+}
