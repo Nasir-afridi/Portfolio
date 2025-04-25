@@ -22,7 +22,15 @@ const Home = () => {
   }, []);
 
   return (
-    <div className="container py-5 my-4">
+    <div
+      className="container py-5 my-4"
+      style={{
+        background: "#f5f7fa",
+        borderRadius: "15px",
+        boxShadow: "0 4px 12px rgba(0,0,0,0.08)",
+        border: "1px solid #e1e5eb",
+      }}
+    >
       <div className="row align-items-center">
         <div className="col-12 col-md-5 mb-4 mb-md-0 d-flex justify-content-center">
           <div
