@@ -12,7 +12,7 @@ const Hero = () => {
             </h1>
             <h2 className="h4 fw-light mb-3">Frontend Developer</h2>
             <p className="lead mb-4">
-              I build modern, responsive web applications using React and
+              I build modern responsive Applications using React and
               JavaScript.
             </p>
 
