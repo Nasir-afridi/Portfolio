@@ -1,7 +1,9 @@
+import Hero from "../components/Navbar/Hero";
+
 const Home = () => {
   return (
     <>
-      <h1>Home page</h1>
+      <Hero />
     </>
   );
 };
