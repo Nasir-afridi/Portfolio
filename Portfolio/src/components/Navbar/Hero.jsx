@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "bootstrap/dist/css/bootstrap.min.css";
 
 const Hero = () => {
   return (
@@ -27,7 +26,14 @@ const Hero = () => {
             </div>
           </div>
 
-         
+          <div className="col-lg-6 text-center">
+            <img
+              src="/My-Img.jpeg"
+              alt="Nasir"
+              className="rounded-circle border border-info img-fluid"
+              style={{ maxWidth: "280px" }}
+            />
+          </div>
         </div>
       </div>
     </section>
