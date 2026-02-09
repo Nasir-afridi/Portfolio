@@ -31,7 +31,6 @@ const About = () => {
     >
       <div className="container py-4">
 
-        {/* Header */}
         <motion.div
           className="text-center mb-5"
           initial="hidden"
@@ -45,7 +44,6 @@ const About = () => {
           <div className="mx-auto bg-info" style={{ width: 80, height: 4, borderRadius: 2 }} />
         </motion.div>
 
-        {/* Intro */}
         <motion.p
           className="lead mb-5 px-3"
           initial="hidden"
@@ -71,7 +69,6 @@ const About = () => {
           </span>.
         </motion.p>
 
-        {/* Row 1 */}
         <motion.div
           className="row g-4 mb-4"
           variants={staggerContainer}
@@ -80,7 +77,6 @@ const About = () => {
           viewport={{ once: true }}
         >
 
-          {/* What I Bring */}
           <div className="col-lg-6">
             <motion.div
               className="h-100 p-4 rounded-3 shadow-lg border border-secondary border-opacity-25"
@@ -108,7 +104,6 @@ const About = () => {
             </motion.div>
           </div>
 
-          {/* Future Goal */}
           <div className="col-lg-6">
             <motion.div
               className="h-100 p-4 rounded-3 shadow-lg border border-secondary border-opacity-25"
@@ -134,7 +129,6 @@ const About = () => {
           </div>
         </motion.div>
 
-        {/* Row 2 */}
         <motion.div
           className="row g-4"
           variants={staggerContainer}
@@ -143,7 +137,6 @@ const About = () => {
           viewport={{ once: true }}
         >
 
-          {/* Experience */}
           <div className="col-lg-6">
             <motion.div
               className="h-100 p-4 rounded-3 shadow-lg border border-secondary border-opacity-25"
@@ -177,8 +170,7 @@ const About = () => {
             </motion.div>
           </div>
 
-          {/* Education */}
-          <div className="col-lg-6">
+           <div className="col-lg-6">
             <motion.div
               className="h-100 p-4 rounded-3 shadow-lg border border-secondary border-opacity-25"
               style={cardStyle}
