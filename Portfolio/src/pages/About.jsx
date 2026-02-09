@@ -1,29 +1,22 @@
 import { motion } from "framer-motion";
 
 const About = () => {
-  const fadeInUp = {
-    hidden: { opacity: 0, y: 30 },
-    visible: { opacity: 1, y: 0 },
+  const fadeInUp = { hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0 } };
+  const fadeInLeft = { hidden: { opacity: 0, x: -40 }, visible: { opacity: 1, x: 0 } };
+  const fadeInRight = { hidden: { opacity: 0, x: 40 }, visible: { opacity: 1, x: 0 } };
+  const staggerContainer = { hidden: { opacity: 0 }, visible: { opacity: 1, transition: { staggerChildren: 0.15 } } };
+
+  const cardStyle = {
+    background: "linear-gradient(135deg, rgba(13,110,253,.05), rgba(13,110,253,.02))",
+    transition: "transform .3s ease, box-shadow .3s ease",
+    cursor: "pointer",
   };
 
-  const fadeInLeft = {
-    hidden: { opacity: 0, x: -40 },
-    visible: { opacity: 1, x: 0 },
-  };
-
-  const fadeInRight = {
-    hidden: { opacity: 0, x: 40 },
-    visible: { opacity: 1, x: 0 },
-  };
-
-  const staggerContainer = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.15,
-      },
-    },
+  const topBar = {
+    height: 6,
+    background: "linear-gradient(135deg,#4facfe,#00f2fe)",
+    borderRadius: 3,
+    marginBottom: 18,
   };
 
   return (
@@ -37,38 +30,33 @@ const About = () => {
       }}
     >
       <div className="container py-4">
+
+        {/* Header */}
         <motion.div
           className="text-center mb-5"
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, margin: "-100px" }}
+          viewport={{ once: true }}
           variants={fadeInUp}
-          transition={{ duration: 0.6 }}
         >
-          <h2
-            className="text-info mb-3 display-4 fw-bold"
-            style={{ letterSpacing: "1.5px" }}
-          >
+          <h2 className="text-info mb-3 display-4 fw-bold">
             About Me
           </h2>
-          <div
-            className="mx-auto bg-info"
-            style={{ width: "80px", height: "4px", borderRadius: "2px" }}
-          />
+          <div className="mx-auto bg-info" style={{ width: 80, height: 4, borderRadius: 2 }} />
         </motion.div>
 
+        {/* Intro */}
         <motion.p
           className="lead mb-5 px-3"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
           variants={fadeInUp}
-          transition={{ delay: 0.2, duration: 0.7 }}
           style={{
-            fontSize: "1.15rem",
-            maxWidth: "800px",
+            fontSize: "1.05rem",
+            maxWidth: 800,
             margin: "0 auto 3rem",
-            color: "rgba(255, 255, 255, 0.9)",
+            color: "rgba(255,255,255,.9)",
             textAlign: "justify",
           }}
         >
@@ -80,33 +68,29 @@ const About = () => {
           it's an e-commerce store that converts or a business platform that
           scales, I deliver solutions that combine <span className="text-info fw-semibold">
              performance, elegance, and real results
-          </span>
-          .
+          </span>.
         </motion.p>
 
+        {/* Row 1 */}
         <motion.div
-          className="row justify-content-center g-4 mb-5"
+          className="row g-4 mb-4"
+          variants={staggerContainer}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, margin: "-50px" }}
-          variants={staggerContainer}
+          viewport={{ once: true }}
         >
+
+          {/* What I Bring */}
           <div className="col-lg-6">
             <motion.div
               className="h-100 p-4 rounded-3 shadow-lg border border-secondary border-opacity-25"
-              style={{
-                background:
-                  "linear-gradient(135deg, rgba(13, 110, 253, 0.05), rgba(13, 110, 253, 0.02))",
-                transition: "transform 0.3s ease, box-shadow 0.3s ease",
-              }}
+              style={cardStyle}
               variants={fadeInLeft}
-              transition={{ duration: 0.6 }}
-              whileHover={{
-                y: -5,
-                boxShadow: "0 12px 30px rgba(13, 110, 253, 0.15)",
-              }}
+              whileHover={{ y: -5, boxShadow: "0 12px 30px rgba(13,110,253,.15)" }}
             >
-              <h4 className="text-info mb-4 fw-bold">What I Bring</h4>
+              <div style={topBar} />
+              <h4 className="text-info mb-3 fw-bold">What I Bring</h4>
+
               <ul className="list-unstyled mb-0">
                 {[
                   "Performance-optimized websites",
@@ -114,49 +98,33 @@ const About = () => {
                   "API integrations & dynamic content",
                   "SEO-friendly structure",
                   "Clean & maintainable code",
-                ].map((item, index) => (
-                  <motion.li
-                    key={index}
-                    className="mb-3 d-flex align-items-start"
-                    variants={fadeInUp}
-                    style={{ fontSize: "0.95rem" }}
-                  >
+                ].map((item, i) => (
+                  <li key={i} className="mb-2 d-flex">
                     <span className="text-info me-2">▹</span>
-                    <span style={{ color: "rgba(255, 255, 255, 0.85)" }}>
-                      {item}
-                    </span>
-                  </motion.li>
+                    <span style={{ color: "rgba(255,255,255,.85)" }}>{item}</span>
+                  </li>
                 ))}
               </ul>
             </motion.div>
           </div>
 
+          {/* Future Goal */}
           <div className="col-lg-6">
             <motion.div
               className="h-100 p-4 rounded-3 shadow-lg border border-secondary border-opacity-25"
-              style={{
-                background:
-                  "linear-gradient(135deg, rgba(13, 110, 253, 0.05), rgba(13, 110, 253, 0.02))",
-                transition: "transform 0.3s ease, box-shadow 0.3s ease",
-              }}
+              style={cardStyle}
               variants={fadeInRight}
-              transition={{ duration: 0.6 }}
-              whileHover={{
-                y: -5,
-                boxShadow: "0 12px 30px rgba(13, 110, 253, 0.15)",
-              }}
+              whileHover={{ y: -5, boxShadow: "0 12px 30px rgba(13,110,253,.15)" }}
             >
-              <h4 className="text-info mb-4 fw-bold">Future Goal</h4>
-              <p
-                className="mb-0"
-                style={{
-                  fontSize: "0.95rem",
-                  color: "rgba(255, 255, 255, 0.85)",
-                }}
-              >
+              <div style={topBar} />
+              <h4 className="text-info mb-3 fw-bold">Future Goal</h4>
+
+              <p style={{ fontSize: ".95rem", color: "rgba(255,255,255,.85)" }}>
                 Expand toward <span className="text-info fw-semibold">
-                  full-stack development </span>
-                  and <span className="text-info fw-semibold">
+                  full-stack development
+                </span>
+                {" "}and{" "}
+                <span className="text-info fw-semibold">
                   scalable application architecture
                 </span>
                 , building end-to-end solutions that deliver exceptional user
@@ -166,45 +134,31 @@ const About = () => {
           </div>
         </motion.div>
 
+        {/* Row 2 */}
         <motion.div
-          className="row justify-content-center g-4"
+          className="row g-4"
+          variants={staggerContainer}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, margin: "-50px" }}
-          variants={staggerContainer}
+          viewport={{ once: true }}
         >
+
+          {/* Experience */}
           <div className="col-lg-6">
             <motion.div
               className="h-100 p-4 rounded-3 shadow-lg border border-secondary border-opacity-25"
-              style={{
-                background:
-                  "linear-gradient(135deg, rgba(13, 110, 253, 0.05), rgba(13, 110, 253, 0.02))",
-                transition: "transform 0.3s ease, box-shadow 0.3s ease",
-              }}
+              style={cardStyle}
               variants={fadeInLeft}
-              transition={{ duration: 0.6 }}
-              whileHover={{
-                y: -5,
-                boxShadow: "0 12px 30px rgba(13, 110, 253, 0.15)",
-              }}
+              whileHover={{ y: -5, boxShadow: "0 12px 30px rgba(13,110,253,.15)" }}
             >
-              <h4 className="text-info mb-4 fw-bold">Experience</h4>
+              <div style={topBar} />
+              <h4 className="text-info mb-3 fw-bold">Experience</h4>
 
-              <div className="mb-3">
-                <p className="text-info mb-2" style={{ fontSize: "0.9rem" }}>
-                  <h5>Capregsoft Private Limited</h5>
-                </p>
-                <h6
-                  className=" mb-1"
-                  style={{ fontSize: "1.05rem", color: "#fff" }}
-                >
-                  Frontend Developer (Internship)
-                </h6>
-
-                <p className=" mb-3" style={{ fontSize: "0.85rem" }}>
-                  June 2025 - December 2025
-                </p>
-              </div>
+              <h5 className="mb-1">Capregsoft Private Limited</h5>
+              <p className="mb-1">Frontend Developer (Internship)</p>
+              <p className="mb-3" style={{ fontSize: ".85rem" }}>
+                June 2025 - December 2025
+              </p>
 
               <ul className="list-unstyled mb-0">
                 {[
@@ -213,64 +167,45 @@ const About = () => {
                   "Designed mobile-first Elementor landing pages, increasing mobile traffic by 25%",
                   "Integrated REST APIs in React & WordPress for real-time content delivery",
                   "Ensured responsive UX across all devices, lowering bounce rate",
-                ].map((item, index) => (
-                  <motion.li
-                    key={index}
-                    className="mb-3 d-flex align-items-start"
-                    variants={fadeInUp}
-                    style={{ fontSize: "0.9rem" }}
-                  >
-                    <span className="text-info me-2 flex-shrink-0">▹</span>
-                    <span style={{ color: "rgba(255, 255, 255, 0.85)" }}>
-                      {item}
-                    </span>
-                  </motion.li>
+                ].map((item, i) => (
+                  <li key={i} className="mb-2 d-flex">
+                    <span className="text-info me-2">▹</span>
+                    <span style={{ color: "rgba(255,255,255,.85)" }}>{item}</span>
+                  </li>
                 ))}
               </ul>
             </motion.div>
           </div>
 
+          {/* Education */}
           <div className="col-lg-6">
             <motion.div
               className="h-100 p-4 rounded-3 shadow-lg border border-secondary border-opacity-25"
-              style={{
-                background:
-                  "linear-gradient(135deg, rgba(13, 110, 253, 0.05), rgba(13, 110, 253, 0.02))",
-                transition: "transform 0.3s ease, box-shadow 0.3s ease",
-              }}
+              style={cardStyle}
               variants={fadeInRight}
-              transition={{ duration: 0.6 }}
-              whileHover={{
-                y: -5,
-                boxShadow: "0 12px 30px rgba(13, 110, 253, 0.15)",
-              }}
+              whileHover={{ y: -5, boxShadow: "0 12px 30px rgba(13,110,253,.15)" }}
             >
-              <h4 className="text-info mb-4 fw-bold">Education</h4>
+              <div style={topBar} />
+              <h4 className="text-info mb-3 fw-bold">Education</h4>
 
-              <div>
-                <div className="d-flex justify-content-between align-items-start mb-2">
-                  <h5
-                    className="fw-semibold mb-0"
-                    style={{ fontSize: "1.05rem", color: "#fff" }}
-                  >
-                    Diploma of Associate Engineering.
-                  </h5>
-                  <span
-                    className=" ms-3 flex-shrink-0"
-                    style={{ fontSize: "0.85rem" }}
-                  >
-                    Sep 2022 - June 2025
-                  </span>
-                </div>
-                <p className="text-info mb-2" style={{ fontSize: "0.95rem" }}>
-                  Information Technology
-                </p>
-                <p className="mb-0 " style={{ fontSize: "0.9rem" }}>
-                  International Islamic University, Islamabad
-                </p>
-              </div>
+              <h5 className="mb-1">
+                Diploma of Associate Engineering.
+              </h5>
+
+              <p className="text-info mb-1">
+                Information Technology
+              </p>
+
+              <p className="mb-1">
+                International Islamic University, Islamabad
+              </p>
+
+              <p style={{ fontSize: ".85rem" }}>
+                Sep 2022 - June 2025
+              </p>
             </motion.div>
           </div>
+
         </motion.div>
       </div>
     </section>
