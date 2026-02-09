@@ -12,8 +12,8 @@ const Hero = () => {
               animate="visible"
               variants={{
                 visible: {
-                  transition: { staggerChildren: 0.3 }
-                }
+                  transition: { staggerChildren: 0.3 },
+                },
               }}
             >
               <motion.h1
@@ -56,6 +56,14 @@ const Hero = () => {
                 <Link to="/contact" className="btn btn-outline-info btn-lg">
                   Contact Me
                 </Link>
+                <a
+  href="https://drive.google.com/uc?export=download&id=1OMf3iUyJou50JidYGY2ssL7WOPONpdYB"
+  className="btn btn-info btn-lg"
+  rel="noopener noreferrer"
+>
+  Download CV
+</a>
+
               </motion.div>
             </motion.div>
           </div>
@@ -72,7 +80,7 @@ const Hero = () => {
                 duration: 1,
                 delay: 1.5,
                 type: "spring",
-                stiffness: 120
+                stiffness: 120,
               }}
             />
           </div>
