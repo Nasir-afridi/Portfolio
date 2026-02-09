@@ -57,13 +57,12 @@ const Hero = () => {
                   Contact Me
                 </Link>
                 <a
-  href="https://drive.google.com/uc?export=download&id=1OMf3iUyJou50JidYGY2ssL7WOPONpdYB"
-  className="btn btn-info btn-lg"
-  rel="noopener noreferrer"
->
-  Download CV
-</a>
-
+                  href="https://drive.google.com/uc?export=download&id=1OMf3iUyJou50JidYGY2ssL7WOPONpdYB"
+                  className="btn btn-info btn-lg"
+                  rel="noopener noreferrer"
+                >
+                  Download CV
+                </a>
               </motion.div>
             </motion.div>
           </div>
