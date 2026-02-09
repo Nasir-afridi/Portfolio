@@ -1,13 +1,26 @@
 import { motion } from "framer-motion";
 
 const About = () => {
-  const fadeInUp = { hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0 } };
-  const fadeInLeft = { hidden: { opacity: 0, x: -40 }, visible: { opacity: 1, x: 0 } };
-  const fadeInRight = { hidden: { opacity: 0, x: 40 }, visible: { opacity: 1, x: 0 } };
-  const staggerContainer = { hidden: { opacity: 0 }, visible: { opacity: 1, transition: { staggerChildren: 0.15 } } };
+  const fadeInUp = {
+    hidden: { opacity: 0, y: 30 },
+    visible: { opacity: 1, y: 0 },
+  };
+  const fadeInLeft = {
+    hidden: { opacity: 0, x: -40 },
+    visible: { opacity: 1, x: 0 },
+  };
+  const fadeInRight = {
+    hidden: { opacity: 0, x: 40 },
+    visible: { opacity: 1, x: 0 },
+  };
+  const staggerContainer = {
+    hidden: { opacity: 0 },
+    visible: { opacity: 1, transition: { staggerChildren: 0.15 } },
+  };
 
   const cardStyle = {
-    background: "linear-gradient(135deg, rgba(13,110,253,.05), rgba(13,110,253,.02))",
+    background:
+      "linear-gradient(135deg, rgba(13,110,253,.05), rgba(13,110,253,.02))",
     transition: "transform .3s ease, box-shadow .3s ease",
     cursor: "pointer",
   };
@@ -30,7 +43,6 @@ const About = () => {
       }}
     >
       <div className="container py-4">
-
         <motion.div
           className="text-center mb-5"
           initial="hidden"
@@ -38,10 +50,11 @@ const About = () => {
           viewport={{ once: true }}
           variants={fadeInUp}
         >
-          <h2 className="text-info mb-3 display-4 fw-bold">
-            About Me
-          </h2>
-          <div className="mx-auto bg-info" style={{ width: 80, height: 4, borderRadius: 2 }} />
+          <h2 className="text-info mb-3 display-4 fw-bold">About Me</h2>
+          <div
+            className="mx-auto bg-info"
+            style={{ width: 80, height: 4, borderRadius: 2 }}
+          />
         </motion.div>
 
         <motion.p
@@ -58,15 +71,19 @@ const About = () => {
             textAlign: "justify",
           }}
         >
-          I don't just write code I build <span className="text-info fw-semibold">
+          I don't just write code I build{" "}
+          <span className="text-info fw-semibold">
             digital experiences that matter
           </span>
-          . As a Frontend Developer specializing in <span className="text-info fw-semibold">React</span>, I turn complex
+          . As a Frontend Developer specializing in{" "}
+          <span className="text-info fw-semibold">React</span>, I turn complex
           challenges into intuitive, lightning-fast web applications. Whether
           it's an e-commerce store that converts or a business platform that
-          scales, I deliver solutions that combine <span className="text-info fw-semibold">
-             performance, elegance, and real results
-          </span>.
+          scales, I deliver solutions that combine{" "}
+          <span className="text-info fw-semibold">
+            performance, elegance, and real results
+          </span>
+          .
         </motion.p>
 
         <motion.div
@@ -76,13 +93,15 @@ const About = () => {
           whileInView="visible"
           viewport={{ once: true }}
         >
-
           <div className="col-lg-6">
             <motion.div
               className="h-100 p-4 rounded-3 shadow-lg border border-secondary border-opacity-25"
               style={cardStyle}
               variants={fadeInLeft}
-              whileHover={{ y: -5, boxShadow: "0 12px 30px rgba(13,110,253,.15)" }}
+              whileHover={{
+                y: -5,
+                boxShadow: "0 12px 30px rgba(13,110,253,.15)",
+              }}
             >
               <div style={topBar} />
               <h4 className="text-info mb-3 fw-bold">What I Bring</h4>
@@ -97,7 +116,9 @@ const About = () => {
                 ].map((item, i) => (
                   <li key={i} className="mb-2 d-flex">
                     <span className="text-info me-2">▹</span>
-                    <span style={{ color: "rgba(255,255,255,.85)" }}>{item}</span>
+                    <span style={{ color: "rgba(255,255,255,.85)" }}>
+                      {item}
+                    </span>
                   </li>
                 ))}
               </ul>
@@ -109,16 +130,20 @@ const About = () => {
               className="h-100 p-4 rounded-3 shadow-lg border border-secondary border-opacity-25"
               style={cardStyle}
               variants={fadeInRight}
-              whileHover={{ y: -5, boxShadow: "0 12px 30px rgba(13,110,253,.15)" }}
+              whileHover={{
+                y: -5,
+                boxShadow: "0 12px 30px rgba(13,110,253,.15)",
+              }}
             >
               <div style={topBar} />
               <h4 className="text-info mb-3 fw-bold">Future Goal</h4>
 
               <p style={{ fontSize: ".95rem", color: "rgba(255,255,255,.85)" }}>
-                Expand toward <span className="text-info fw-semibold">
+                Expand toward{" "}
+                <span className="text-info fw-semibold">
                   full-stack development
-                </span>
-                {" "}and{" "}
+                </span>{" "}
+                and{" "}
                 <span className="text-info fw-semibold">
                   scalable application architecture
                 </span>
@@ -136,13 +161,15 @@ const About = () => {
           whileInView="visible"
           viewport={{ once: true }}
         >
-
           <div className="col-lg-6">
             <motion.div
               className="h-100 p-4 rounded-3 shadow-lg border border-secondary border-opacity-25"
               style={cardStyle}
               variants={fadeInLeft}
-              whileHover={{ y: -5, boxShadow: "0 12px 30px rgba(13,110,253,.15)" }}
+              whileHover={{
+                y: -5,
+                boxShadow: "0 12px 30px rgba(13,110,253,.15)",
+              }}
             >
               <div style={topBar} />
               <h4 className="text-info mb-3 fw-bold">Experience</h4>
@@ -163,41 +190,39 @@ const About = () => {
                 ].map((item, i) => (
                   <li key={i} className="mb-2 d-flex">
                     <span className="text-info me-2">▹</span>
-                    <span style={{ color: "rgba(255,255,255,.85)" }}>{item}</span>
+                    <span style={{ color: "rgba(255,255,255,.85)" }}>
+                      {item}
+                    </span>
                   </li>
                 ))}
               </ul>
             </motion.div>
           </div>
 
-           <div className="col-lg-6">
+          <div className="col-lg-6">
             <motion.div
               className="h-100 p-4 rounded-3 shadow-lg border border-secondary border-opacity-25"
               style={cardStyle}
               variants={fadeInRight}
-              whileHover={{ y: -5, boxShadow: "0 12px 30px rgba(13,110,253,.15)" }}
+              whileHover={{
+                y: -5,
+                boxShadow: "0 12px 30px rgba(13,110,253,.15)",
+              }}
             >
               <div style={topBar} />
               <h4 className="text-info mb-3 fw-bold">Education</h4>
 
-              <h5 className="mb-1">
-                Diploma of Associate Engineering.
-              </h5>
+              <h5 className="mb-1">Diploma of Associate Engineering.</h5>
 
-              <p className="text-info mb-1">
-                Information Technology
-              </p>
+              <p className="text-info mb-1">Information Technology</p>
 
               <p className="mb-1">
                 International Islamic University, Islamabad
               </p>
 
-              <p style={{ fontSize: ".85rem" }}>
-                Sep 2022 - June 2025
-              </p>
+              <p style={{ fontSize: ".85rem" }}>Sep 2022 - June 2025</p>
             </motion.div>
           </div>
-
         </motion.div>
       </div>
     </section>
