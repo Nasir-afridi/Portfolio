@@ -274,6 +274,83 @@ export default function Technologies() {
             </div>
           ))}
         </motion.div>
+
+        <motion.div
+          className="mt-5 pt-5"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-100px" }}
+          variants={fadeInUp}
+          transition={{ delay: 0.2 }}
+        >
+          <div
+            className="p-5 rounded-4 shadow-lg border border-secondary border-opacity-25 mx-auto text-center position-relative overflow-hidden"
+            style={{
+              background:
+                "linear-gradient(135deg, rgba(13,110,253,.10), rgba(13,110,253,.03))",
+              maxWidth: "900px",
+              backdropFilter: "blur(10px)",
+            }}
+          >
+            <div
+              className="position-absolute"
+              style={{
+                top: "-50%",
+                right: "-20%",
+                width: "400px",
+                height: "400px",
+                background:
+                  "radial-gradient(circle, rgba(13,110,253,0.15) 0%, transparent 70%)",
+                borderRadius: "50%",
+                filter: "blur(60px)",
+                zIndex: 0,
+              }}
+            />
+
+            <div className="position-relative" style={{ zIndex: 1 }}>
+              <h5
+                className="text-info mb-3 fw-bold"
+                style={{ fontSize: "clamp(1.8rem,4vw,2.5rem)" }}
+              >
+                Always Learning & Growing
+              </h5>
+              <p
+                className="mb-4 mx-auto"
+                style={{
+                  color: "rgba(255,255,255,.85)",
+                  fontSize: "clamp(1rem,2vw,1.15rem)",
+                  maxWidth: "620px",
+                  lineHeight: "1.7",
+                }}
+              >
+                Continuously expanding my skill set with new technologies and
+                best practices to deliver cutting-edge solutions.
+              </p>
+              <motion.a
+                href="https://github.com/nasir-afridi"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-info fw-semibold d-inline-flex align-items-center gap-2"
+                style={{
+                  fontSize: "1rem",
+                  minWidth: "200px",
+                  borderRadius: "12px",
+                  padding: "14px 28px",
+                }}
+                whileHover={{
+                  scale: 1.08,
+                  y: -3,
+                  boxShadow: "0 15px 35px rgba(13,202,240,0.5)",
+                }}
+                whileTap={{ scale: 0.95 }}
+                transition={{ duration: 0.2 }}
+              >
+                <FaGithub size={20} />
+                View My Work
+              </motion.a>
+            </div>
+          </div>
+        </motion.div>
       </div>
     </section>
   );
