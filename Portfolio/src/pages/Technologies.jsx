@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import "bootstrap/dist/css/bootstrap.min.css";
 import {
   FaReact,
   FaHtml5,
