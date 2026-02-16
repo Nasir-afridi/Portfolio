@@ -1,7 +1,7 @@
 import React, { useState } from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-
 import {
   FaReact,
   FaWordpress,
@@ -153,6 +153,7 @@ const Services = () => {
       }}
     >
       <div className="container py-4">
+        {/* Header */}
         <motion.div
           className="text-center mb-5"
           initial="hidden"
@@ -181,6 +182,7 @@ const Services = () => {
           </h2>
         </motion.div>
 
+        {/* Services Grid */}
         <motion.div
           className="row g-4"
           variants={staggerContainer}
@@ -198,6 +200,7 @@ const Services = () => {
           ))}
         </motion.div>
 
+        {/* CTA Section */}
         <motion.div
           className="mt-5 pt-5"
           initial="hidden"
@@ -249,26 +252,29 @@ const Services = () => {
                 Let's collaborate and create something amazing together with
                 cutting-edge solutions.
               </p>
-              <motion.a
-                href="#contact"
-                className="btn btn-info fw-semibold d-inline-flex align-items-center gap-2"
-                style={{
-                  fontSize: "1rem",
-                  minWidth: "200px",
-                  borderRadius: "12px",
-                  padding: "14px 28px",
-                }}
-                whileHover={{
-                  scale: 1.08,
-                  y: -3,
-                  boxShadow: "0 15px 35px rgba(13,202,240,0.5)",
-                }}
-                whileTap={{ scale: 0.95 }}
-                transition={{ duration: 0.2 }}
-              >
-                Let's Talk
-                <FaArrowRight size={18} />
-              </motion.a>
+              <Link to="/contact" style={{ textDecoration: "none" }}>
+                <motion.button
+                  className="btn btn-info fw-semibold d-inline-flex align-items-center gap-2"
+                  style={{
+                    fontSize: "1rem",
+                    minWidth: "200px",
+                    borderRadius: "12px",
+                    padding: "14px 28px",
+                    border: "none",
+                    cursor: "pointer",
+                  }}
+                  whileHover={{
+                    scale: 1.08,
+                    y: -3,
+                    boxShadow: "0 15px 35px rgba(13,202,240,0.5)",
+                  }}
+                  whileTap={{ scale: 0.95 }}
+                  transition={{ duration: 0.2 }}
+                >
+                  Let's Talk
+                  <FaArrowRight size={18} />
+                </motion.button>
+              </Link>
             </div>
           </div>
         </motion.div>
@@ -277,6 +283,7 @@ const Services = () => {
   );
 };
 
+// Service Card Component
 const ServiceCard = ({ service, index, scaleIn }) => {
   const [isFlipped, setIsFlipped] = useState(false);
 
@@ -300,6 +307,7 @@ const ServiceCard = ({ service, index, scaleIn }) => {
           onMouseEnter={() => setIsFlipped(true)}
           onMouseLeave={() => setIsFlipped(false)}
         >
+          {/* Front of Card */}
           <motion.div
             className="rounded-4 p-4 border border-secondary border-opacity-25 position-absolute w-100 h-100"
             style={{
@@ -313,6 +321,7 @@ const ServiceCard = ({ service, index, scaleIn }) => {
             }}
           >
             <div className="d-flex flex-column h-100">
+              {/* Icon & Top Border */}
               <div className="position-relative mb-4">
                 <div
                   className="position-absolute top-0 start-0 w-100"
@@ -362,6 +371,7 @@ const ServiceCard = ({ service, index, scaleIn }) => {
                 </p>
               </div>
 
+              {/* Hover Indicator */}
               <div
                 className="d-flex align-items-center gap-2 mt-3"
                 style={{
@@ -375,6 +385,7 @@ const ServiceCard = ({ service, index, scaleIn }) => {
               </div>
             </div>
 
+            {/* Gradient Background Overlay */}
             <div
               className="position-absolute top-0 start-0 w-100 h-100 rounded-4"
               style={{
@@ -385,6 +396,7 @@ const ServiceCard = ({ service, index, scaleIn }) => {
             />
           </motion.div>
 
+          {/* Back of Card */}
           <motion.div
             className="rounded-4 p-4 border border-secondary border-opacity-25 position-absolute w-100 h-100"
             style={{
@@ -446,26 +458,34 @@ const ServiceCard = ({ service, index, scaleIn }) => {
                   ))}
                 </ul>
               </div>
-              <Link to="/contact">
-                <motion.button
-                  className="btn w-100 fw-semibold"
-                  style={{
-                    background: "rgba(255,255,255,0.95)",
-                    color: "#212529",
-                    border: "none",
-                    borderRadius: "12px",
-                    padding: "12px",
-                    fontSize: "1rem",
-                  }}
-                  whileHover={{
-                    scale: 1.03,
-                    boxShadow: "0 8px 20px rgba(255,255,255,0.3)",
-                  }}
-                  whileTap={{ scale: 0.97 }}
-                >
-                  Get Started
-                </motion.button>
-              </Link>
+
+              <motion.button
+                className="btn w-100 fw-semibold"
+                style={{
+                  background: "rgba(255,255,255,0.95)",
+                  color: "#212529",
+                  border: "none",
+                  borderRadius: "12px",
+                  padding: "12px",
+                  fontSize: "1rem",
+                  cursor: "pointer",
+                }}
+                whileHover={{
+                  scale: 1.03,
+                  boxShadow: "0 8px 20px rgba(255,255,255,0.3)",
+                }}
+                whileTap={{ scale: 0.97 }}
+                onClick={() => {
+                  const contactSection = document.getElementById("contact");
+                  if (contactSection) {
+                    contactSection.scrollIntoView({ behavior: "smooth" });
+                  } else {
+                    window.location.href = "/contact";
+                  }
+                }}
+              >
+                Get Started
+              </motion.button>
             </div>
           </motion.div>
         </motion.div>
