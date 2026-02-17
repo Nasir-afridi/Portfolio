@@ -1,4 +1,3 @@
-import React from "react";
 import { motion } from "framer-motion";
 import {
   FaEnvelope,
@@ -14,7 +13,6 @@ import {
 import { MdWork } from "react-icons/md";
 
 export default function Contact() {
-  // ── Framer Motion variants ──────────────────
   const fadeInUp = {
     hidden: { opacity: 0, y: 30 },
     visible: {
@@ -41,7 +39,6 @@ export default function Contact() {
     },
   };
 
-  // ── Contact Info Cards ──────────────────────
   const contactInfo = [
     {
       Icon: FaEnvelope,
@@ -77,7 +74,6 @@ export default function Contact() {
     },
   ];
 
-  // ── Social Links ────────────────────────────
   const socialLinks = [
     {
       Icon: FaGithub,
@@ -110,7 +106,6 @@ export default function Contact() {
       }}
     >
       <div className="container py-4">
-        {/* ── Header ── */}
         <motion.div
           className="text-center mb-5"
           initial="hidden"
@@ -135,7 +130,6 @@ export default function Contact() {
           </p>
         </motion.div>
 
-        {/* ── Contact Info Cards ── */}
         <motion.div
           className="row g-3 justify-content-center mb-4"
           variants={staggerContainer}
@@ -159,7 +153,6 @@ export default function Contact() {
           ))}
         </motion.div>
 
-        {/* ── Social Links ── */}
         <motion.div
           className="row g-3 justify-content-center mb-5"
           variants={staggerContainer}
@@ -191,7 +184,6 @@ export default function Contact() {
                     }}
                     whileTap={{ scale: 0.97 }}
                   >
-                    {/* gradient overlay */}
                     <motion.div
                       className="position-absolute top-0 start-0 w-100 h-100"
                       style={{
@@ -202,7 +194,6 @@ export default function Contact() {
                       whileHover={{ opacity: 0.1 }}
                       transition={{ duration: 0.3 }}
                     />
-                    {/* top accent */}
                     <motion.div
                       className="position-absolute top-0 start-0 w-100"
                       style={{
@@ -214,7 +205,6 @@ export default function Contact() {
                       transition={{ duration: 0.3 }}
                     />
 
-                    {/* Icon */}
                     <div
                       className="rounded-3 d-flex align-items-center justify-content-center flex-shrink-0 position-relative"
                       style={{
@@ -229,7 +219,6 @@ export default function Contact() {
                       />
                     </div>
 
-                    {/* Text */}
                     <div className="position-relative" style={{ zIndex: 1 }}>
                       <p
                         className="mb-0 fw-bold"
@@ -261,7 +250,6 @@ export default function Contact() {
                       </p>
                     </div>
 
-                    {/* Arrow */}
                     <motion.div
                       className="ms-auto position-relative"
                       style={{ zIndex: 1 }}
@@ -282,7 +270,6 @@ export default function Contact() {
           ))}
         </motion.div>
 
-        {/* ── CTA Box — Hire Me ── */}
         <motion.div
           initial="hidden"
           whileInView="visible"
@@ -299,7 +286,6 @@ export default function Contact() {
               backdropFilter: "blur(10px)",
             }}
           >
-            {/* glow blobs */}
             <div
               className="position-absolute"
               style={{
@@ -332,7 +318,6 @@ export default function Contact() {
             />
 
             <div className="position-relative" style={{ zIndex: 1 }}>
-              {/* Availability badge */}
               <motion.div
                 className="mb-4"
                 animate={{ scale: [1, 1.05, 1] }}
@@ -383,9 +368,7 @@ export default function Contact() {
                 together!
               </p>
 
-              {/* CTA Buttons */}
               <div className="d-flex flex-wrap justify-content-center gap-3">
-                {/* Hire Me — WhatsApp */}
                 <motion.a
                   href="https://wa.me/923187295615?text=Hi%20Nasir!%20I%20visited%20your%20portfolio%20and%20I'd%20like%20to%20hire%20you."
                   target="_blank"
@@ -410,7 +393,6 @@ export default function Contact() {
                   Hire Me
                 </motion.a>
 
-                {/* Email Me */}
                 <motion.button
                   onClick={() => {
                     const to = "nasirwc05@gmail.com";
@@ -456,7 +438,6 @@ export default function Contact() {
         </motion.div>
       </div>
 
-      {/* pulse dot animation */}
       <style>{`
         @keyframes pulse-dot {
           0%, 100% { opacity: 1; transform: scale(1); }
@@ -467,7 +448,6 @@ export default function Contact() {
   );
 }
 
-/* ── Reusable small Contact Card ── */
 function ContactCard({ item }) {
   return (
     <motion.div
