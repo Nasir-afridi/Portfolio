@@ -363,7 +363,7 @@ export default function Contact() {
                   lineHeight: "1.7",
                 }}
               >
-                I'm currently available for freelance projects and internship
+                Currently available for freelance projects and job
                 opportunities. Let's collaborate and create something amazing
                 together!
               </p>
