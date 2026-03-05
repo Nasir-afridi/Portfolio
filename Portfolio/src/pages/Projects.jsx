@@ -43,20 +43,22 @@ export default function Projects() {
     },
     {
       id: 2,
-      title: "Amanex-Coin",
-      type: "Crypto Platform",
+      title: "TESAQ",
+      type: "Corporate Website",
       description:
-        "A WordPress-based cryptocurrency platform focused on community empowerment and blockchain-driven digital value, designed with a responsive and user-friendly interface.",
+        "Designed and developed a full corporate website for TESAQ LLC, an Islamabad-based IT services firm with custom layouts, responsive design, and structured service pages covering Telecom, Cloud, Data, DevOps, Application Development, Database Engineering, and Consulting & Managed Services domains.",
       tech: [
         "WordPress",
         "WooCommerce",
-        "Custom Themes",
-        "Plugins",
+        "PHP",
+        "HTML",
+        "CSS",
+        "Elementor",
         "Responsive Design",
       ],
-      link: "https://amanex-coin.com",
+      link: "https://tesaq.com",
       gradient: "linear-gradient(135deg, rgb(79, 172, 254), rgb(0, 242, 254))",
-      icon: "₿",
+      icon: "🏢",
     },
     {
       id: 3,
@@ -190,7 +192,7 @@ export default function Projects() {
                       rel="noopener noreferrer"
                       style={{
                         padding: "10px 20px",
-                        background: "rgba(255,255,255,0.1)", 
+                        background: "rgba(255,255,255,0.1)",
                         color: "rgba(255,255,255,0.85)",
                         borderRadius: 12,
                         textDecoration: "none",
