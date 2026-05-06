@@ -56,13 +56,13 @@ const Hero = () => {
                 <Link to="/contact" className="btn btn-outline-info btn-lg">
                   Contact Me
                 </Link>
-                <a
+                {/* <a
                   href="https://drive.google.com/uc?export=download&id=1OMf3iUyJou50JidYGY2ssL7WOPONpdYB"
                   className="btn btn-info btn-lg"
                   rel="noopener noreferrer"
                 >
                   Download CV
-                </a>
+                </a> */}
               </motion.div>
             </motion.div>
           </div>
