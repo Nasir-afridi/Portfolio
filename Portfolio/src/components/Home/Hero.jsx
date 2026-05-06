@@ -31,7 +31,7 @@ const Hero = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
               >
-                Frontend Developer
+                Full-Stack Developer
               </motion.h2>
 
               <motion.p
