@@ -25,19 +25,19 @@ export default function Projects() {
   const projects = [
     {
       id: 1,
-      title: "Qazi Jewellers",
-      type: "E-Commerce Platform",
+      title: "Zeest Media",
+      type: "Company Website",
       description:
-        "A jewellery e-commerce platform built with WordPress & WooCommerce, featuring a responsive UI (Elementor), live gold/silver pricing, WhatsApp chat support, custom contact forms, and SEO/performance optimizations for a fast, mobile-friendly experience.",
+        "Zeest Media  is a full-service digital marketing and media agency that helps businesses grow through SEO, web development, content marketing, branding, and press release distribution. The company focuses on delivering creative strategies and measurable results that improve online visibility and business growth.",
       tech: [
-        "WordPress",
-        "WooCommerce",
-        "Elementor",
-        "Custom CSS",
-        "SEO",
-        "Plugins",
+        "HTML",
+        "Tailwind",
+        "Javascript",
+        "React.js",
+        "Next.js",
+        "Responsive Design",
       ],
-      link: "https://qazijewellers.com",
+      link: "https://staging.zeestmedia.com/",
       gradient: "linear-gradient(135deg, rgb(79, 172, 254), rgb(0, 242, 254))",
       icon: "💎",
     },
@@ -66,8 +66,16 @@ export default function Projects() {
       type: "Full-Stack Application",
       description:
         "Built React.js application with Bootstrap UI, integrating Express.js backend for authentication (login/signup) using JWT tokens. Implemented secure public and private routes for role-based access with PostgreSQL for user data management.",
-      tech: ["React.js", "Bootstrap", "Express.js", "PostgreSQL", "JWT"],
-      link: "#",
+      tech: [
+        "HTML",
+        "JavaScript",
+        "React.js",
+        "Bootstrap",
+        "Express.js",
+        "PostgreSQL",
+        "JWT",
+      ],
+      link: "https://github.com/Nasir-afridi/fyp-fresh-hub",
       gradient: "linear-gradient(135deg,#4facfe,#00f2fe)",
       icon: "🌿",
     },
@@ -202,23 +210,7 @@ export default function Projects() {
                       View Live
                     </a>
                   </center>
-                ) : (
-                  <center>
-                    <button
-                      disabled
-                      style={{
-                        padding: "10px 20px",
-                        background: "rgba(138,142,160,.2)",
-                        color: "#8892b0",
-                        borderRadius: 12,
-                        border: "1px solid rgba(138,142,160,.3)",
-                        fontWeight: 600,
-                      }}
-                    >
-                      Private Project
-                    </button>
-                  </center>
-                )}
+                ) : null}
               </motion.div>
             </div>
           ))}
