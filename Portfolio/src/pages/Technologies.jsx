@@ -9,9 +9,8 @@ import {
   FaGithub,
 } from "react-icons/fa";
 import { IoLogoJavascript } from "react-icons/io5";
-import { SiWoo, SiPostgresql, SiGo } from "react-icons/si";
-import { MdCode, MdApi, MdDevices, MdSearch } from "react-icons/md";
-import { BiCodeBlock } from "react-icons/bi";
+import { SiPostgresql, SiGo, SiWix } from "react-icons/si";
+import { MdApi, MdDevices, MdSearch } from "react-icons/md";
 
 export default function Technologies() {
   const fadeInUp = {
@@ -87,16 +86,10 @@ export default function Technologies() {
       color: "#21759b",
     },
     {
-      name: "WooCommerce",
-      Icon: SiWoo,
-      gradient: "linear-gradient(135deg, #96588a, #7f4a7a)",
-      color: "#96588a",
-    },
-    {
-      name: "Elementor",
-      Icon: MdCode,
-      gradient: "linear-gradient(135deg, #d30c5c, #92003b)",
-      color: "#d30c5c",
+      name: "Wix",
+      Icon: SiWix,
+      gradient: "linear-gradient(135deg, #0c6efd, #3b82f6)",
+      color: "#0c6efd",
     },
     {
       name: "PostgreSQL",
@@ -109,12 +102,6 @@ export default function Technologies() {
       Icon: SiGo,
       gradient: "linear-gradient(135deg, #00add8, #00a29c)",
       color: "#00add8",
-    },
-    {
-      name: "Gutenberg",
-      Icon: BiCodeBlock,
-      gradient: "linear-gradient(135deg, #1e1e1e, #3d3d3d)",
-      color: "#3d3d3d",
     },
     {
       name: "API Development",
@@ -167,10 +154,12 @@ export default function Technologies() {
           variants={fadeInUp}
         >
           <h2 className="text-info mb-3 display-4 fw-bold">Tools & Tech</h2>
+
           <div
             className="mx-auto bg-info"
             style={{ width: 80, height: 4, borderRadius: 2 }}
           />
+
           <h2
             className="mt-4 mb-0"
             style={{
@@ -257,6 +246,7 @@ export default function Technologies() {
                       }}
                     />
                   </motion.div>
+
                   <h5
                     className="mb-0 fw-semibold"
                     style={{
@@ -309,10 +299,13 @@ export default function Technologies() {
             <div className="position-relative" style={{ zIndex: 1 }}>
               <h5
                 className="text-info mb-3 fw-bold"
-                style={{ fontSize: "clamp(1.8rem,4vw,2.5rem)" }}
+                style={{
+                  fontSize: "clamp(1.8rem,4vw,2.5rem)",
+                }}
               >
                 Always Learning & Growing
               </h5>
+
               <p
                 className="mb-4 mx-auto"
                 style={{
@@ -325,6 +318,7 @@ export default function Technologies() {
                 Continuously expanding my skill set with new technologies and
                 best practices to deliver cutting-edge solutions.
               </p>
+
               <motion.a
                 href="https://github.com/nasir-afridi"
                 target="_blank"
