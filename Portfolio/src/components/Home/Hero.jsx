@@ -40,8 +40,9 @@ const Hero = () => {
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8, ease: "easeOut", delay: 0.6 }}
               >
-                I build modern responsive Applications using React and
-                JavaScript.
+                I build modern, responsive web applications using React,
+                JavaScript, Golang, WordPress, and Wix with a focus on
+                performance, SEO, and user experience.
               </motion.p>
 
               <motion.div
