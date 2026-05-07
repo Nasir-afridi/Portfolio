@@ -55,7 +55,7 @@ const Services = () => {
       Icon: FaReact,
       title: "React Development",
       description:
-        "Building dynamic, responsive UIs with React.js, implementing lazy loading and optimizing performance for 40% faster load times.",
+        "Building dynamic, responsive UIs with React.js, implementing lazy loading and optimizing performance for faster load times.",
       features: [
         "Component Architecture",
         "State Management",
@@ -67,10 +67,25 @@ const Services = () => {
     },
     {
       id: 2,
+      Icon: FaRocket,
+      title: "Golang Development",
+      description:
+        "Developing high-performance backend applications and REST APIs using Golang with scalable and secure architecture.",
+      features: [
+        "REST API Development",
+        "Backend Architecture",
+        "Authentication Systems",
+        "High Performance Services",
+      ],
+      gradient: "linear-gradient(135deg, #00ADD8, #007ea7)",
+      color: "#00ADD8",
+    },
+    {
+      id: 3,
       Icon: FaWordpress,
       title: "WordPress Development",
       description:
-        "Custom WordPress solutions with WooCommerce, Elementor, and SEO optimization to boost Google rankings and mobile traffic.",
+        "Custom WordPress solutions with WooCommerce, Elementor, and SEO optimization to boost rankings and traffic.",
       features: [
         "Theme Customization",
         "E-commerce Setup",
@@ -81,11 +96,26 @@ const Services = () => {
       color: "#21759b",
     },
     {
-      id: 3,
+      id: 4,
+      Icon: FaMobileAlt,
+      title: "Wix Development",
+      description:
+        "Creating modern, responsive, and SEO-friendly Wix websites for businesses, portfolios, and e-commerce brands.",
+      features: [
+        "Custom Wix Design",
+        "Responsive Layouts",
+        "SEO Optimization",
+        "Business Website Setup",
+      ],
+      gradient: "linear-gradient(135deg, #6366f1, #4f46e5)",
+      color: "#6366f1",
+    },
+    {
+      id: 5,
       Icon: FaMobileAlt,
       title: "Responsive Design",
       description:
-        "Mobile-first approach ensuring seamless UX across all devices, reducing bounce rates and increasing user engagement.",
+        "Mobile-first approach ensuring seamless UX across all devices, reducing bounce rates and increasing engagement.",
       features: [
         "Mobile-First Design",
         "Cross-Browser Testing",
@@ -96,11 +126,11 @@ const Services = () => {
       color: "#06b6d4",
     },
     {
-      id: 4,
+      id: 6,
       Icon: FaPlug,
       title: "API Integration",
       description:
-        "Seamless API integration in React and WordPress for real-time, SEO-safe content delivery and enhanced functionality.",
+        "Seamless API integration in React and WordPress for real-time, SEO-safe content delivery.",
       features: [
         "RESTful APIs",
         "JWT Authentication",
@@ -111,11 +141,11 @@ const Services = () => {
       color: "#ff6b6b",
     },
     {
-      id: 5,
+      id: 7,
       Icon: FaRocket,
       title: "Performance Optimization",
       description:
-        "Speed optimization techniques including code splitting, lazy loading, and caching to deliver lightning-fast web experiences.",
+        "Speed optimization techniques including code splitting, lazy loading, and caching.",
       features: [
         "Code Splitting",
         "Asset Optimization",
@@ -126,11 +156,11 @@ const Services = () => {
       color: "#f59e0b",
     },
     {
-      id: 6,
+      id: 8,
       Icon: FaShoppingCart,
       title: "E-commerce Solutions",
       description:
-        "Complete e-commerce platforms with WooCommerce, custom checkout flows, payment integration, and inventory management.",
+        "Complete e-commerce platforms with WooCommerce, payment integration, and inventory management.",
       features: [
         "WooCommerce Setup",
         "Payment Gateway",
@@ -153,7 +183,6 @@ const Services = () => {
       }}
     >
       <div className="container py-4">
-        {/* Header */}
         <motion.div
           className="text-center mb-5"
           initial="hidden"
@@ -164,10 +193,12 @@ const Services = () => {
           <h2 className="text-info mb-3 display-4 fw-bold">
             Services & Expertise
           </h2>
+
           <div
             className="mx-auto bg-info"
             style={{ width: 80, height: 4, borderRadius: 2 }}
           />
+
           <h2
             className="mt-4 mb-0"
             style={{
@@ -182,7 +213,6 @@ const Services = () => {
           </h2>
         </motion.div>
 
-        {/* Services Grid */}
         <motion.div
           className="row g-4"
           variants={staggerContainer}
@@ -200,7 +230,6 @@ const Services = () => {
           ))}
         </motion.div>
 
-        {/* CTA Section */}
         <motion.div
           className="mt-5 pt-5"
           initial="hidden"
@@ -240,6 +269,7 @@ const Services = () => {
               >
                 Ready to bring your project to life?
               </h5>
+
               <p
                 className="mb-4 mx-auto"
                 style={{
@@ -252,6 +282,7 @@ const Services = () => {
                 Let's collaborate and create something amazing together with
                 cutting-edge solutions.
               </p>
+
               <Link to="/contact" style={{ textDecoration: "none" }}>
                 <motion.button
                   className="btn btn-info fw-semibold d-inline-flex align-items-center gap-2"
@@ -283,8 +314,7 @@ const Services = () => {
   );
 };
 
-// Service Card Component
-const ServiceCard = ({ service, index, scaleIn }) => {
+const ServiceCard = ({ service, scaleIn }) => {
   const [isFlipped, setIsFlipped] = useState(false);
 
   return (
@@ -307,7 +337,6 @@ const ServiceCard = ({ service, index, scaleIn }) => {
           onMouseEnter={() => setIsFlipped(true)}
           onMouseLeave={() => setIsFlipped(false)}
         >
-          {/* Front of Card */}
           <motion.div
             className="rounded-4 p-4 border border-secondary border-opacity-25 position-absolute w-100 h-100"
             style={{
@@ -321,7 +350,6 @@ const ServiceCard = ({ service, index, scaleIn }) => {
             }}
           >
             <div className="d-flex flex-column h-100">
-              {/* Icon & Top Border */}
               <div className="position-relative mb-4">
                 <div
                   className="position-absolute top-0 start-0 w-100"
@@ -331,6 +359,7 @@ const ServiceCard = ({ service, index, scaleIn }) => {
                     borderRadius: "2px",
                   }}
                 />
+
                 <motion.div
                   className="mt-4"
                   whileHover={{
@@ -348,7 +377,6 @@ const ServiceCard = ({ service, index, scaleIn }) => {
                 </motion.div>
               </div>
 
-              {/* Content */}
               <div className="flex-grow-1">
                 <h3
                   className="mb-3 fw-bold"
@@ -360,6 +388,7 @@ const ServiceCard = ({ service, index, scaleIn }) => {
                 >
                   {service.title}
                 </h3>
+
                 <p
                   style={{
                     color: "rgba(255,255,255,.7)",
@@ -371,7 +400,6 @@ const ServiceCard = ({ service, index, scaleIn }) => {
                 </p>
               </div>
 
-              {/* Hover Indicator */}
               <div
                 className="d-flex align-items-center gap-2 mt-3"
                 style={{
@@ -385,7 +413,6 @@ const ServiceCard = ({ service, index, scaleIn }) => {
               </div>
             </div>
 
-            {/* Gradient Background Overlay */}
             <div
               className="position-absolute top-0 start-0 w-100 h-100 rounded-4"
               style={{
@@ -396,7 +423,6 @@ const ServiceCard = ({ service, index, scaleIn }) => {
             />
           </motion.div>
 
-          {/* Back of Card */}
           <motion.div
             className="rounded-4 p-4 border border-secondary border-opacity-25 position-absolute w-100 h-100"
             style={{
@@ -418,6 +444,7 @@ const ServiceCard = ({ service, index, scaleIn }) => {
                 >
                   Key Features
                 </h4>
+
                 <ul className="list-unstyled">
                   {service.features.map((feature, idx) => (
                     <motion.li
@@ -445,6 +472,7 @@ const ServiceCard = ({ service, index, scaleIn }) => {
                           marginTop: "2px",
                         }}
                       />
+
                       <span
                         style={{
                           color: "rgba(255,255,255,0.95)",
@@ -477,6 +505,7 @@ const ServiceCard = ({ service, index, scaleIn }) => {
                 whileTap={{ scale: 0.97 }}
                 onClick={() => {
                   const contactSection = document.getElementById("contact");
+
                   if (contactSection) {
                     contactSection.scrollIntoView({ behavior: "smooth" });
                   } else {
